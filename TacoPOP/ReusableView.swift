@@ -6,4 +6,15 @@
 //  Copyright © 2017年 Joshua Kaplan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol ReusableView: class {}
+
+extension ReusableView where Self: UIView {
+    
+    
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
+}
